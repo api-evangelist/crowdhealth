@@ -1,0 +1,57 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.joincrowdhealth.com/pricing
+currency: USD
+billing_period: monthly
+pricing_model: >-
+  CrowdHealth does not sell named product tiers. Pricing is a two-part monthly figure
+  produced by a calculator on the pricing page: a fixed per-member advocacy fee paid to
+  CrowdHealth, plus a member-selected monthly contribution commitment that funds other
+  members' bills. The calculator varies the total by household size and by how many
+  members are 55 or older; those age/household multipliers are not published as a table.
+plan_count: 1
+plans:
+- name: CrowdHealth Membership
+  price: 60
+  currency: USD
+  period: monthly
+  unit: per member
+  label: Advocacy Fee
+  description: >-
+    "Members pay $60 to be a part of the Crowd. This goes to CrowdHealth to pay the
+    bills." Covers care advocates, bill negotiation, provider search, prescription
+    discounts and access to the crowdfunding platform.
+  quota: null
+  overage: null
+  limits:
+  - Health events costing more than $500 are eligible to be crowdfunded to the Crowd.
+  - Not available to residents of VT, CA, MA, NJ, RI or DC due to state-level insurance
+    mandates.
+  - Eligibility restrictions published for tobacco use and for stated weight thresholds.
+add_ons:
+- name: Member Contribution Commitment
+  type: variable
+  range_min: 500
+  range_max: 15000
+  currency: USD
+  period: monthly
+  description: >-
+    "You'll be asked for up to this amount each month to help another member in the
+    Crowd." The member selects a commitment level on a $500–$15,000 slider; the amount
+    actually requested in a given month depends on the Crowd's funding need.
+discounts:
+- name: Longevity Discount Program
+  url: https://www.joincrowdhealth.com/longevity-discount-program
+  description: Healthy-habit program that can lower the monthly membership cost.
+enterprise:
+  available: true
+  note: >-
+    Large group enrollments are routed to "schedule time with a CrowdHealth Specialist
+    for pricing" — no published group rate card.
+api_pricing:
+  published: false
+  note: CrowdHealth publishes no API, and therefore no API or usage-based pricing.
+x-evidence:
+- url: https://www.joincrowdhealth.com/pricing
+  http_status: 200
+  fetched: '2026-08-12'

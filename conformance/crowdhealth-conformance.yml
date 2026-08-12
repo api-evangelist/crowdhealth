@@ -1,0 +1,86 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.joincrowdhealth.com/data-security
+note: >-
+  CrowdHealth publishes no machine-readable API contract, so nothing here is derived from
+  a spec. Every entry below is read from CrowdHealth's own public pages. Claims made only
+  in job postings are recorded separately and NOT asserted as conformance.
+standards:
+- id: hipaa
+  conforms: true
+  evidence: >-
+    Data Security page states CrowdHealth and its partners "adhere strictly to HIPAA
+    guidelines", requires members to execute HIPAA authorizations, and shares data with
+    third parties only under NDAs and HIPAA-compliant Business Associate Agreements.
+  source: https://www.joincrowdhealth.com/data-security
+  note: >-
+    HIPAA is a regulatory obligation with no certification body; this is a stated
+    adherence claim, not a certification.
+- id: soc2
+  conforms: false
+  evidence: >-
+    No SOC 2 report, Type I/II attestation, or trust center is published on any public
+    CrowdHealth page. SOC 2 appears only in a Cybersecurity Engineer job posting as a
+    framework the role would work with — a hiring signal, not a published attestation.
+  source: https://www.joincrowdhealth.com/careers/cybersecurity-engineer
+- id: iso-27001
+  conforms: false
+  evidence: >-
+    No ISO 27001 certificate is published. Same hiring-signal caveat as SOC 2.
+  source: https://www.joincrowdhealth.com/careers/cybersecurity-engineer
+- id: pci-dss
+  conforms: false
+  evidence: No PCI DSS attestation published, though the platform moves member funds.
+- id: third-party-penetration-testing
+  conforms: true
+  evidence: >-
+    Three Astra Security penetration-test certificates published as PDFs (AWS, iOS,
+    Android), with a stated annual cadence.
+  source: https://www.joincrowdhealth.com/data-security
+- id: encryption-at-rest-and-in-transit
+  conforms: true
+  evidence: >-
+    "All your data is encrypted both when it's stored ('at rest') and when it's being
+    sent between systems ('in transit')."
+  source: https://www.joincrowdhealth.com/data-security
+- id: oauth2
+  conforms: false
+  evidence: No public OAuth surface; /.well-known/oauth-authorization-server 404s on
+    every host.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration 404s on every host.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    The private GraphQL backend returns a GraphQL `errors[]` envelope and plain JSON 404
+    bodies of the shape {"error","message","statusCode"} — not application/problem+json.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No /.well-known/security.txt served; the security contact is prose-only.
+- id: fhir
+  conforms: false
+  evidence: >-
+    No FHIR surface. CrowdHealth is a consumer funding platform, not a clinical data
+    system, and exchanges no FHIR resources publicly.
+regulatory_context:
+- regime: HIPAA
+  applicable: true
+  note: Handles protected health information for U.S. members.
+- regime: State insurance mandates
+  applicable: true
+  note: >-
+    CrowdHealth is explicitly not insurance and is unavailable in VT, CA, MA, NJ, RI and
+    DC because of state-level insurance mandates.
+- regime: Banking / FDIC
+  applicable: true
+  note: >-
+    "CrowdHealth is a financial technology company, not a bank. Banking services are
+    provided by Regent Bank, Member FDIC."
+x-evidence:
+- url: https://www.joincrowdhealth.com/data-security
+  http_status: 200
+  fetched: '2026-08-12'
+- url: https://www.joincrowdhealth.com/.well-known/openid-configuration
+  http_status: 404
+  fetched: '2026-08-12'

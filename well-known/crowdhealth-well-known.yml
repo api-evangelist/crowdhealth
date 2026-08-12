@@ -1,0 +1,64 @@
+generated: '2026-08-12'
+method: probed
+source: live GET probes of /.well-known/* on every CrowdHealth host
+note: >-
+  Every probed path returned 404 (or 403 on the members-only app host). CrowdHealth
+  serves no /.well-known/ discovery surface. This file records a verified ABSENCE — no
+  WellKnown or SecurityTxt pointer is wired into apis.yml, because the pointer would
+  assert that the provider serves that surface. The www host is Webflow-hosted and
+  answers every /.well-known/* path with an HTML page reading "Invalid .well-known
+  request"; the api host answers with a JSON 404 envelope; the app host answers 403.
+hosts:
+- host: https://www.joincrowdhealth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.joincrowdhealth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://app.joincrowdhealth.com
+  note: members-only application host; returns 403 to unauthenticated requests
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+x-evidence:
+  fetched: '2026-08-12'
+  hit_count: 0
+  agent_card_found: false

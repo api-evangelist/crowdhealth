@@ -1,0 +1,22 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.joincrowdhealth.com/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  CrowdHealth publishes no developer documentation of any kind, so there are no published
+  rate limits, no documented rate-limit response headers, and no documented exhaustion
+  status code. The only API surface observed is the private Apollo GraphQL endpoint at
+  https://api.joincrowdhealth.com/graphql that backs the CrowdHealth web and mobile apps;
+  it is not offered to third-party developers and its limits are undocumented. This is an
+  honest zero recorded from probing, not an unchecked field.
+x-evidence:
+- url: https://api.joincrowdhealth.com/graphql
+  http_status: 400
+  note: Apollo Server CSRF-prevention error on GET; no rate-limit headers returned.
+  fetched: '2026-08-12'
+- url: https://www.joincrowdhealth.com/sitemap.xml
+  http_status: 200
+  note: 121 URLs, none developer- or API-related.
+  fetched: '2026-08-12'
