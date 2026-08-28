@@ -9,6 +9,17 @@ description: 'CrowdHealth is an Austin, Texas company offering community-powered
   iOS/Android mobile apps. CrowdHealth is a consumer product company: it operates a private
   Apollo GraphQL backend at api.joincrowdhealth.com that serves its own apps, but publishes
   no public API, SDK, developer portal, or machine-readable contract of any kind.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/60db2ced4a27795173580197/65bba6a83a452a08f68cd220_Open%20Graph%20Image%20V2.png
 url: https://raw.githubusercontent.com/api-evangelist/crowdhealth/refs/heads/main/apis.yml
 x-type: company
