@@ -64,5 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CrowdHealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+CrowdHealth is an Austin, Texas company offering community-powered health care crowdfunding as an alternative to traditional health insurance. Members pay a monthly membership (advocacy) fee and commit a monthly contribution amount that is used to fund other members' eligible medical bills peer-to-peer, without premiums, networks, or claim denials. The platform bundles bill negotiation, personal care advocates, provider search, prescription discounts and care navigation into a consumer web app and iOS/Android mobile apps. CrowdHealth is a consumer product company: it operates a private Apollo GraphQL backend at api.joincrowdhealth.com that serves its own apps, but publishes no public API, SDK, developer portal, or machine-readable contract of any kind.
+
+**Areas:** Company · Health · Healthcare · Health Insurance · Health Sharing · Crowdfunding · Medical Billing · Consumer Health · Insurance Alternative · Fintech
+
+## CrowdHealth on APIs.io
+
+Everything profiled for CrowdHealth is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/crowdhealth/](https://apis.io/providers/crowdhealth/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [crowdhealth](https://apis.io/servers/crowdhealth/crowdhealth/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Crowdhealth Domain Security](https://apis.io/security/crowdhealth/crowdhealth-domain-security/)
+- [Crowdhealth Vulnerability Disclosure](https://apis.io/security/crowdhealth/crowdhealth-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Crowdhealth Plans Pricing](https://apis.io/plans/crowdhealth/crowdhealth-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Crowdhealth Rate Limits](https://apis.io/rate-limits/crowdhealth/crowdhealth-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.joincrowdhealth.com/)
+- [Pricing](https://www.joincrowdhealth.com/pricing)
+- [Sign up](https://app.joincrowdhealth.com/registration/new)
+- [Support](https://www.joincrowdhealth.com/contact)
+- [Blog](https://www.joincrowdhealth.com/resources/blog)
+- [Security](https://www.joincrowdhealth.com/data-security)
+- [Compliance](https://www.joincrowdhealth.com/data-security)
+- [Terms of service](https://www.joincrowdhealth.com/terms-and-conditions)
+- [Privacy policy](https://www.joincrowdhealth.com/privacy-policy)
+- [GitHub](https://github.com/JoinCrowdHealth)
+
+## API Evangelist rating
+
+**Kin Score 26.9** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 73.7 |
+
+**Agent readiness 11.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/crowdhealth/](https://apis.io/providers/crowdhealth/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CrowdHealth: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/crowdhealth/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
